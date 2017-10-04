@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+
+  <script src="index.js" async defer></script>
+
+  <title>DashBoard</title>
+
+</head>
+
+<body>
+  <!-- Navbar goes here -->
+
+  <!-- Page Layout here -->
+  <div class="row">
+
+    <div class="col s12 m4 l3">
+      <!-- Note that "m4 l3" was added -->
+      <!-- Grey navigation panel
+
+                This content will be:
+            3-columns-wide on large screens,
+            4-columns-wide on medium screens,
+            12-columns-wide on small screens  -->
+      <ul id="slide-out" class="side-nav">
+        <div class="row">
+          <nav class="col">
+            <!-- <div class="nav-wrapper"> -->
+            <li><a href="#">Details</a></li>
+            <!-- </div> -->
+          </nav>
+        </div>
+      </ul>
+      <a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="material-icons">menu</i></a>
+    </div>
+
+
+    <div class="col s12 m8 l9">
+      <!-- Note that "m8 l9" was added -->
+      <!-- Teal page content
+
+                This content will be:
+            9-columns-wide on large screens,
+            8-columns-wide on medium screens,
+            12-columns-wide on small screens  -->
+
+      <!-- <form action="" class="col s12 m8 l9"> -->
+        <div class="row">
+          <div class="input-field col s4">
+            <input placeholder="Game Title" id="game_title" type="text" class="validate">
+            <label for="game_title">Title</label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s4">
+            <input placeholder="Game Website" id="game_website" type="text" class="validate">
+            <label for="game_website">Website (optional)</label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s4">
+            <select multiple id="game_category">
+              <option disabled selected>Game Category(ies)</option>
+              <option>rpg</option>
+              <option>action</option>
+              <option>strategy</option>
+            </select>
+            <label for="game_category">Category</label>
+          </div>
+        </div>
+
+        <button id="game_submitGameDetail" class="btn-flat waves-effect waves-teal" type="button">Submit
+          <i class="material-icons right">send</i>
+        </button>
+      <!-- </form> -->
+
+    </div>
+  </div>
+
+
+</body>
+
+<!--Import jQuery before materialize.js-->
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+<script src="jqueryindex.js" charset="utf-8"></script>
+<!-- <script>
+  $(document).ready(function() {
+    $('select').material_select();
+    // Initialize collapse button
+    $(".button-collapse").sideNav();
+    // Initialize collapsible (uncomment the line below if you use the dropdown variation)
+    //$('.collapsible').collapsible();
+
+    const gTitle = document.ge
+  });
+</script> -->
+
+</html>

@@ -55,7 +55,7 @@ const postData = (data) => {
   request.onreadystatechange = () => {
     ( request.readyState == 4 && request.status >= 200 )
       const user = request.responseText
-      
+
       console.log('request.responseText ::; ', user)
       console.log('onreadystatechange.data ::; ', data)
       console.log('request ::; ', request)
