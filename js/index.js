@@ -38,6 +38,24 @@ const getAllData = async () => {
 
 }
 
+const changeURL = ( url ) => history.pushState(null, null, url);
+
+const changeView = ( viewOld, viewNew ) => {
+  getELementId(viewOld).classList.add('hide')
+  getELementId(viewNew).classList.remove('hide')
+}
+// const btn = document.getElementById('changeRoute')
+
+const changeRoute = (url) => {
+  // const url = evt.toElement.dataset.url + '.html'
+  // console.log('------------------------------------');
+  // console.log(evt.toElement.dataset.url);
+  // console.log(url);
+  // console.log('------------------------------------');
+  changeURL(url)
+  changeView('view1', 'view0')
+  
+}
 
 const postData = async (data) => {
   // data = { title: 'gTitle', website: 'gSite', genre: ['result', 'resultt'] }
@@ -55,7 +73,7 @@ const postData = async (data) => {
   console.log('fetch.post.response ::; ', response);
   const json = await response.json();
   console.log('fetch.post.json ::; ', json);
-  changeRoute()
+  changeRoute('vaicaraio.html')
   // fetch('http://localhost:9099/games', options)
   //   .then(function(response) {
   //     console.log('response ::; ', response)
@@ -98,34 +116,16 @@ const gameDetail = (evt) => {
 
 }
 
-const changeURL = ( url ) => history.pushState(null, null, url);
-
-const changeView = ( viewOld, viewNew ) => {
-  getELementId(viewOld).classList.add('hide')
-  getELementId(viewNew).classList.remove('hide')
-}
-// const btn = document.getElementById('changeRoute')
-
-const changeRoute = (evt) => {
-  const url = evt.toElement.dataset.url + '.html'
-  console.log('------------------------------------');
-  console.log(evt.toElement.dataset.url);
-  console.log(url);
-  console.log('------------------------------------');
-  changeURL(url)
-  changeView('view1', 'view0')
-  
-}
 // const buttonChangeRoute = addEventTo(getELementId('changeRoute'), 'click', changeRoute)
 // }
 
 
-const addEventsTo = (els, ev, run) => 
-  els.forEach(function(element) {
-    element.addEventListener(ev,run,false);
-  }, this);
+// const addEventsTo = (els, ev, run) => 
+//   els.forEach(function(element) {
+//     element.addEventListener(ev,run,false);
+//   }, this);
 
-const menu = addEventsTo(qrSelectorAll('.linkPage'), 'click', changeRoute)
+// const menu = addEventsTo(qrSelectorAll('.linkPage'), 'click', changeRoute)
 
 const submitGameDetail = addEventTo(getELementId('gameButton'), 'click', gameDetail)
 const buttonShowGames = addEventTo(getELementId('showGames'), 'click', getAllData)

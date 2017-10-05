@@ -23,21 +23,27 @@ const changeViewByClass = ( viewOld, viewNew ) => {
   getELementId(viewNew).classList.remove('hide')
 }
 
-const changeRoute = (evt) => {
-  const url = evt.toElement.dataset.url + '.html'
-  console.log('------------------------------------');
-  console.log(evt.toElement.dataset.url);
-  console.log(url);
-  console.log('------------------------------------');
-  changeURL(url)
-  // changeViewByClass('view', 'view0')
-  
-  
-  qrSelectorAll('.view').forEach(function(element) {
+const hideViews = ( views ) => 
+  views.forEach(function(element) {
     element.classList.add('hide');
   }, this);
 
-  getELementId(evt.toElement.dataset.url).classList.remove('hide');
+const changeRoute = (evt) => {
+  const url = evt.toElement.dataset.url
+  // console.log('------------------------------------');
+  // console.log(evt.toElement.dataset.url);
+  // console.log(url);
+  // console.log('------------------------------------');
+  hideViews(qrSelectorAll('.view'))
+  changeURL(url + '.html')
+  // changeViewByClass('view', 'view0')
+  
+  
+  // qrSelectorAll('.view').forEach(function(element) {
+  //   element.classList.add('hide');
+  // }, this);
+
+  getELementId(url).classList.remove('hide');
   
 }
 // const buttonChangeRoute = addEventTo(getELementId('changeRoute'), 'click', changeRoute)
