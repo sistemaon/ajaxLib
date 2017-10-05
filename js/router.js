@@ -87,26 +87,20 @@ const changeRoute = (evt) => {
   // hideViews(qrSelectorAll('.view'))
   changeURL(url + '.html')
   // changeViewByClass('view', 'view0')
-<<<<<<< HEAD
 
 
-=======
-  
+
   getELementId(VIEW_WRAPPER_ID).innerHTML = ''
   getELementId(VIEW_WRAPPER_ID).appendChild(myViews[url])
-  
->>>>>>> d038e407bbc1dab0936c46c8579c1e15b02fd18e
+
   // qrSelectorAll('.view').forEach(function(element) {
   //   element.classList.add('hide');
   // }, this);
 
-<<<<<<< HEAD
   getELementId(url).classList.remove('hide');
 
-=======
   // getELementId(url).classList.remove('hide');
-  
->>>>>>> d038e407bbc1dab0936c46c8579c1e15b02fd18e
+
 }
 // const buttonChangeRoute = addEventTo(getELementId('changeRoute'), 'click', changeRoute)
 // }
