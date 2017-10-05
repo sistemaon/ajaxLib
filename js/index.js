@@ -93,6 +93,11 @@ const gameDetail = (evt) => {
 
 const changeURL = ( url ) => history.pushState(null, null, url);
 
+// const btn = document.getElementById('changeRoute')
+
+const changeRoute = () => changeURL('teste-novo.html')
+const buttonChangeRoute = addEventTo(getELementId('changeRoute'), 'click', changeRoute)
+
 
 const submitGameDetail = addEventTo(getELementId('game_submitGameDetail'), 'click', gameDetail)
 const buttonShowGames = addEventTo(getELementId('showGames'), 'click', getAllData)
