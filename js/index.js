@@ -55,7 +55,7 @@ const postData = async (data) => {
   console.log('fetch.post.response ::; ', response);
   const json = await response.json();
   console.log('fetch.post.json ::; ', json);
-  changeRoute()
+  // changeRoute()
   // fetch('http://localhost:9099/games', options)
   //   .then(function(response) {
   //     console.log('response ::; ', response)
@@ -113,13 +113,13 @@ const changeRoute = (evt) => {
   console.log('------------------------------------');
   console.log(evt.toElement.dataset.url);
   console.log('------------------------------------');
-  
+
 }
 // const buttonChangeRoute = addEventTo(getELementId('changeRoute'), 'click', changeRoute)
 // }
 
 
-const addEventsTo = (els, ev, run) => 
+const addEventsTo = (els, ev, run) =>
   els.forEach(function(element) {
     element.addEventListener(ev,run,false);
   }, this);
