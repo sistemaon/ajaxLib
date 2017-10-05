@@ -112,13 +112,10 @@ const changeRoute = (evt) => {
   console.log(evt.toElement.dataset.url);
   console.log(url);
   console.log('------------------------------------');
-<<<<<<< HEAD
 
-=======
   changeURL(url)
   changeView('view1', 'view0')
-  
->>>>>>> 66d3bd30fa36b73c205100c15c5f19dafbdcfe00
+
 }
 // const buttonChangeRoute = addEventTo(getELementId('changeRoute'), 'click', changeRoute)
 // }
