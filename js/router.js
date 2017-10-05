@@ -23,7 +23,7 @@ const changeViewByClass = ( viewOld, viewNew ) => {
   getELementId(viewNew).classList.remove('hide')
 }
 
-const hideViews = ( views ) => 
+const hideViews = ( views ) =>
   views.forEach(function(element) {
     element.classList.add('hide');
   }, this);
@@ -37,20 +37,20 @@ const changeRoute = (evt) => {
   hideViews(qrSelectorAll('.view'))
   changeURL(url + '.html')
   // changeViewByClass('view', 'view0')
-  
-  
+
+
   // qrSelectorAll('.view').forEach(function(element) {
   //   element.classList.add('hide');
   // }, this);
 
   getELementId(url).classList.remove('hide');
-  
+
 }
 // const buttonChangeRoute = addEventTo(getELementId('changeRoute'), 'click', changeRoute)
 // }
 
 
-const addEventsTo = (els, ev, run) => 
+const addEventsTo = (els, ev, run) =>
   els.forEach(function(element) {
     element.addEventListener(ev,run,false);
   }, this);

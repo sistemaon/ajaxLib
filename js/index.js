@@ -54,7 +54,7 @@ const changeRoute = (url) => {
   // console.log('------------------------------------');
   changeURL(url)
   changeView('view1', 'view0')
-  
+
 }
 
 const postData = async (data) => {
@@ -120,7 +120,7 @@ const gameDetail = (evt) => {
 // }
 
 
-// const addEventsTo = (els, ev, run) => 
+// const addEventsTo = (els, ev, run) =>
 //   els.forEach(function(element) {
 //     element.addEventListener(ev,run,false);
 //   }, this);
