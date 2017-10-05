@@ -104,7 +104,10 @@ const changeRoute = () => {
   changeView('view1', 'view0')
 }
 // const buttonChangeRoute = addEventTo(getELementId('changeRoute'), 'click', changeRoute)
-
+const linkPage =document.querySelectorAll('.linkPage');
+for(var i=0;i<linkPage.length;i++){
+  linkPage[i].addEventListener('click',callback,false);
+}
 
 const submitGameDetail = addEventTo(getELementId('gameButton'), 'click', gameDetail)
 const buttonShowGames = addEventTo(getELementId('showGames'), 'click', getAllData)
