@@ -54,7 +54,7 @@
             8-columns-wide on medium screens,
             12-columns-wide on small screens  -->
 
-      <!-- <form action="" class="col s12 m8 l9"> -->
+      <form id='game_submitGameDetail' action="/index.html" method="POST" class="col s12 m8 l9">
         <div class="row">
           <div class="input-field col s4">
             <input placeholder="Game Title" id="game_title" type="text" class="validate">
@@ -72,19 +72,28 @@
         <div class="row">
           <div class="input-field col s4">
             <select multiple id="game_category">
-              <option disabled selected>Game Category(ies)</option>
-              <option>rpg</option>
-              <option>action</option>
-              <option>strategy</option>
-            </select>
+                    <option disabled selected>Game Category(ies)</option>
+                    <option>rpg</option>
+                    <option>action</option>
+                    <option>strategy</option>
+              </select>
             <label for="game_category">Category</label>
           </div>
         </div>
 
-        <button id="game_submitGameDetail" class="btn-flat waves-effect waves-teal" type="button">Submit
+        <button id="gameButton" class="btn-flat waves-effect waves-teal" type="submit">Submit
           <i class="material-icons right">send</i>
         </button>
-      <!-- </form> -->
+
+        <button id="showGames" class="btn-flat waves-effect waves-teal" type="button">Show
+          <i class="material-icons right">send</i>
+        </button>
+
+        <button id="postGames" class="btn-flat waves-effect waves-teal" type="button">Save
+          <i class="material-icons right">send</i>
+        </button>
+
+      </form>
 
     </div>
   </div>
