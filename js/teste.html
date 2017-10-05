@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div class="gallery">
+    <a href="https://cdn.css-tricks.com/peter.html">
+      <img src="bill.png" alt="Peter" class="peter" data-name="peter">
+    </a>
+    <a href="https://cdn.css-tricks.com/ray.html">
+      <img src="ray.png" alt="Ray" class="ray" data-name="ray">
+    </a>
+    <a href="https://cdn.css-tricks.com/egon.html">
+      <img src="egon.png" alt="Egon" class="egon" data-name="egon">
+    </a>
+    <a href="https://cdn.css-tricks.com/winston.html">
+      <img src="winston.png" alt="Winston" class="winston" data-name="winston">
+    </a>
+  </div>
+  
+  <p class="selected">Ghostbusters</p>
+  <p class="highlight"></p>
+  
+  <div class="content"></div>
+
+  <script>
+  var container = document.querySelector('.gallery');
+
+container.addEventListener('click', function(e) {
+    if (e.target != e.currentTarget) {
+      e.preventDefault();
+      // e.target is the image inside the link we just clicked.
+
+      console.log('------------------------------------');
+      console.log(e.target);
+      console.log('------------------------------------');
+      var data = e.target.getAttribute('data-name'),
+      url = data + ".html";
+      history.pushState(null, null, url);
+        
+    }
+    e.stopPropagation();
+  }, false);
+  </script>
+</body>
+</html>
