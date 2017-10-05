@@ -8,6 +8,10 @@ const addEventTo = (el, ev, run) => el.addEventListener(ev, run);
 
 const urlApi = 'http://localhost:9099/games';
 
+const hide = ( element ) => element.style.display = 'none'
+
+hide( document.getElementById('header') )
+
 const getAllData = async () => {
 
   const response = await fetch(urlApi);
