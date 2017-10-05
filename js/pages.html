@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <script src="router.js" async defer></script>
+
+  <title>DashBoard</title>
+  <style>
+      body div.hide {
+        display: none !important;
+      }
+      </style>
+</head>
+
+<body>
+  
+  <ul> MENUUUU
+    <li>
+      <a class="linkPage" data-url="page1">Page 1</a>
+    </li>
+    <li>
+      <a class="linkPage" data-url="page2">Page 2</a>
+    </li>
+    <li>
+      <a class="linkPage" data-url="page3">Page 3</a>
+    </li>
+  </ul>
+  
+  <div id="page1" class="view">
+    <h1>Page 1</h1>
+    <object type="text/html" data="page1.html"></object>
+  </div>
+  
+  <div id="page2" class="view hide">
+      <h1>Page 2</h1>
+      <object type="text/html" data="page2.html"></object>
+    </div>
+    
+  <div id="page3" class="view hide">
+      <h1>Page 3</h1>
+      <object type="text/html" data="page3.html"></object>
+    </div>
+
+</body>
+
+
+</html>
