@@ -48,7 +48,7 @@ const postData = async (data) => {
   console.log('fetch.post.response ::; ', response);
   const json = await response.json();
   console.log('fetch.post.json ::; ', json);
-
+  changeRoute()
   // fetch('http://localhost:9099/games', options)
   //   .then(function(response) {
   //     console.log('response ::; ', response)
@@ -103,9 +103,9 @@ const changeRoute = () => {
   changeURL('teste-novo.html')
   changeView('view1', 'view0')
 }
-const buttonChangeRoute = addEventTo(getELementId('changeRoute'), 'click', changeRoute)
+// const buttonChangeRoute = addEventTo(getELementId('changeRoute'), 'click', changeRoute)
 
 
-const submitGameDetail = addEventTo(getELementId('game_submitGameDetail'), 'click', gameDetail)
+const submitGameDetail = addEventTo(getELementId('gameButton'), 'click', gameDetail)
 const buttonShowGames = addEventTo(getELementId('showGames'), 'click', getAllData)
 const buttonPostGames = addEventTo(getELementId('postGames'), 'click', postData)
