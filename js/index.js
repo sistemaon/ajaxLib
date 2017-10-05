@@ -93,9 +93,16 @@ const gameDetail = (evt) => {
 
 const changeURL = ( url ) => history.pushState(null, null, url);
 
+const changeView = ( viewOld, viewNew ) => {
+  getELementId(viewOld).classList.add('hide')
+  getELementId(viewNew).classList.remove('hide')
+}
 // const btn = document.getElementById('changeRoute')
 
-const changeRoute = () => changeURL('teste-novo.html')
+const changeRoute = () => {
+  changeURL('teste-novo.html')
+  changeView('view1', 'view0')
+}
 const buttonChangeRoute = addEventTo(getELementId('changeRoute'), 'click', changeRoute)
 
 
