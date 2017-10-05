@@ -91,6 +91,8 @@ const gameDetail = (evt) => {
 
 }
 
+const changeURL = ( url ) => history.pushState(null, null, url);
+
 
 const submitGameDetail = addEventTo(getELementId('game_submitGameDetail'), 'click', gameDetail)
 const buttonShowGames = addEventTo(getELementId('showGames'), 'click', getAllData)
