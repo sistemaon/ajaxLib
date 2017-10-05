@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+</head>
+
+<body>
+
+  <div class="col s12 m8 l9">
+    <form id='game_submitGameDetail' action="/index.html" method="POST" class="col s12 m8 l9">
+
+      <div class="row">
+        <div class="input-field col s4">
+          <input placeholder="Game Title" id="game_title" type="text" class="validate">
+          <label for="game_title">Title</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s4">
+          <input placeholder="Game Website" id="game_website" type="text" class="validate">
+          <label for="game_website">Website (optional)</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s4">
+          <select multiple id="game_category">
+                  <option disabled selected>Game Category(ies)</option>
+                  <option>rpg</option>
+                  <option>action</option>
+                  <option>strategy</option>
+            </select>
+          <label for="game_category">Category</label>
+        </div>
+      </div>
+
+      <button id="gameButton" class="btn-flat waves-effect waves-teal" type="submit">Submit
+        <i class="material-icons right">send</i>
+      </button>
+
+    </form>
+  </div>
+
+</body>
+<!--Import jQuery before materialize.js-->
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+<script src="jqueryindex.js" charset="utf-8"></script>
+<!-- <script>
+  $(document).ready(function() {
+    $('select').material_select();
+    // Initialize collapse button
+    $(".button-collapse").sideNav();
+    // Initialize collapsible (uncomment the line below if you use the dropdown variation)
+    //$('.collapsible').collapsible();
+
+    const gTitle = document.ge
+  });
+</script> -->
+</html>

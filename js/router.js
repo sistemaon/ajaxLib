@@ -1,4 +1,7 @@
+//pegar o id do html lah na tag
 const VIEW_WRAPPER_ID = 'view'
+
+//definir as pags e views!
 const VIEWS = [
   {
     path: 'page1.html',
@@ -14,6 +17,7 @@ const VIEWS = [
   }
 ]
 
+
 const getViewByType = ( type ) => ( view ) => {
   let o = document.createElement( 'object' )
   o.data = view.path
@@ -23,7 +27,7 @@ const getViewByType = ( type ) => ( view ) => {
 
 const getViewHTML = getViewByType( 'text/html' )
 
-const toViews = ( views ) => ( obj, view, i ) => 
+const toViews = ( views ) => ( obj, view, i ) =>
   Object.assign( obj, {
     [ views[ i ].route ]: view
   } )
