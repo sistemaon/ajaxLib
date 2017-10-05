@@ -99,12 +99,18 @@ const changeView = ( viewOld, viewNew ) => {
 }
 // const btn = document.getElementById('changeRoute')
 
-const changeRoute = () => {
-  changeURL('teste-novo.html')
-  changeView('view1', 'view0')
+const changeRoute = (evt) => {
+  // changeURL('teste-novo.html')
+  // changeView('view1', 'view0')
+  console.log('------------------------------------');
+  console.log(evt);
+  console.log('------------------------------------');
+  
 }
 // const buttonChangeRoute = addEventTo(getELementId('changeRoute'), 'click', changeRoute)
 
+
+const menu = addEventTo(qrSelectorAll('.linkPage'), 'click', changeRoute)
 
 const submitGameDetail = addEventTo(getELementId('gameButton'), 'click', gameDetail)
 const buttonShowGames = addEventTo(getELementId('showGames'), 'click', getAllData)
