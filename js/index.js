@@ -6,6 +6,13 @@ const getElementValue = (id) => getELementId(id).value;
 
 const addEventTo = (el, ev, run) => el.addEventListener(ev, run);
 
+
+// el.addEventListener(ev, run);
+
+// const linkPage =document.querySelectorAll('.linkPage');
+// for(var i=0;i<linkPage.length;i++){
+//   linkPage[i].addEventListener('click',callback,false);
+
 const urlApi = 'http://localhost:9099/games';
 
 const hide = ( element ) => element.style.display = 'none'
@@ -100,20 +107,24 @@ const changeView = ( viewOld, viewNew ) => {
 // const btn = document.getElementById('changeRoute')
 
 const changeRoute = (evt) => {
-  // changeURL('teste-novo.html')
-  // changeView('view1', 'view0')
+  const url = evt.toElement.dataset.url + '.html'
+  changeURL(url)
+  changeView('view1', 'view0')
   console.log('------------------------------------');
-  console.log(evt);
+  console.log(evt.toElement.dataset.url);
   console.log('------------------------------------');
   
 }
 // const buttonChangeRoute = addEventTo(getELementId('changeRoute'), 'click', changeRoute)
-const linkPage =document.querySelectorAll('.linkPage');
-for(var i=0;i<linkPage.length;i++){
-  linkPage[i].addEventListener('click',callback,false);
-}
+// }
 
-const menu = addEventTo(qrSelectorAll('.linkPage'), 'click', changeRoute)
+
+const addEventsTo = (els, ev, run) => 
+  els.forEach(function(element) {
+    element.addEventListener(ev,run,false);
+  }, this);
+
+const menu = addEventsTo(qrSelectorAll('.linkPage'), 'click', changeRoute)
 
 const submitGameDetail = addEventTo(getELementId('gameButton'), 'click', gameDetail)
 const buttonShowGames = addEventTo(getELementId('showGames'), 'click', getAllData)
