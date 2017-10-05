@@ -1,5 +1,5 @@
 const VIEW_WRAPPER_ID = 'view'
-const views = [
+const VIEWS = [
   {
     path: 'page1.html',
     route: 'page1'
@@ -23,20 +23,17 @@ const getViewByType = ( type ) => ( view ) => {
 
 const getViewHTML = getViewByType( 'text/html' )
 
-const toViews = ( views ) => ( obj, view, i ) => {
-  console.log( '------------------------------------' )
-  console.log( obj )
-  console.log( '------------------------------------' )
-  const o = {
+const toViews = ( views ) => ( obj, view, i ) => 
+  Object.assign( obj, {
     [ views[ i ].route ]: view
-  }
-  return Object.assign( obj, o )
-}
+  } )
 
-const myViews = views.map( getViewHTML ).reduce( toViews( views ), {} )
+const getViews = ( views ) => views.map( getViewHTML )
+                      .reduce( toViews( views ), {} )
 
+const views = getViews( VIEWS )
 console.log( '------------------------------------' )
-console.log( 'myViews: ', myViews )
+console.log( 'views: ', views )
 console.log( '------------------------------------' )
 
 // myViews.forEach( view => {
@@ -77,30 +74,15 @@ views.forEach( function ( element ) {
 
 const changeRoute = ( evt ) => {
   const url = evt.toElement.dataset.url
-  // console.log( '------------------------------------' )
-  // console.log( evt.toElement.dataset.url )
-  // console.log( url )
-  // console.log( '------------------------------------' )
-  // hideViews( qrSelectorAll( '.view' ) )
   changeURL( url + '.html' )
-  // changeViewByClass( 'view', 'view0' )
 
   getELementId( VIEW_WRAPPER_ID ).innerHTML = ''
-  getELementId( VIEW_WRAPPER_ID ).appendChild( myViews[ url ] )
-
-  // qrSelectorAll( '.view' ).forEach( function( element ) {
-  //   element.classList.add( 'hide' )
-  // }, this )
-
-  // getELementId( url ).classList.remove( 'hide' )
-
+  getELementId( VIEW_WRAPPER_ID ).appendChild( views[ url ] )
 }
-// const buttonChangeRoute = addEventTo( getELementId( 'changeRoute' ), 'click', changeRoute )
-// }
 
 const addEventsTo = ( els, ev, run ) =>
 els.forEach( function ( element ) {
   element.addEventListener( ev, run, false )
 }, this )
 
-const menu = addEventsTo( qrSelectorAll( '.linkPage' ), 'click', changeRoute )
+addEventsTo( qrSelectorAll( '.linkPage' ), 'click', changeRoute )
