@@ -1,32 +1,22 @@
 {
-  "persons": [
+  "games": [
     {
-      "name": "Pson1",
-      "age": 24,
-      "network": {
-        "email": "psone@email.com",
-        "skype": "idl:98722"
-      },
-      "id": 1
+      "id": 1,
+      "title": "H-erro",
+      "website": "www.com",
+      "genre": [
+        "rpg",
+        "strategy"
+      ]
     },
     {
-      "id": 3,
-      "name": "Pson3",
-      "age": 19,
-      "network": {
-        "email": "ummail@m.com",
-        "skype": "liveID:90123"
-      }
-    },
-    {
-      "id": 4,
-      "name": "Pson4",
-      "age": 20
-    },
-    {
-      "id": 5,
-      "name": "Pson5",
-      "age": 21
+      "id": 2,
+      "title": "Onyx Eye",
+      "website": "www.com.br",
+      "genre": [
+        "action",
+        "strategy"
+      ]
     }
   ]
 }

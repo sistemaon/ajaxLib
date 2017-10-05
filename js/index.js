@@ -10,7 +10,7 @@ const urlApi = 'http://localhost:9099/games';
 
 const hide = ( element ) => element.style.display = 'none'
 
-hide( document.getElementById('header') )
+// hide( document.getElementById('header') )
 
 const getAllData = async () => {
 
